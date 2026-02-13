@@ -1,0 +1,29 @@
+/**
+ * KodNest Premium Build System — Utilities
+ * Transitions: 150–200ms, ease-in-out, no bounce, no parallax
+ */
+
+/* Spacing utilities (scale: 8, 16, 24, 40, 64) */
+.kn-mt-xs { margin-top: var(--kn-space-xs); }
+.kn-mt-sm { margin-top: var(--kn-space-sm); }
+.kn-mt-md { margin-top: var(--kn-space-md); }
+.kn-mt-lg { margin-top: var(--kn-space-lg); }
+.kn-mt-xl { margin-top: var(--kn-space-xl); }
+
+.kn-mb-xs { margin-bottom: var(--kn-space-xs); }
+.kn-mb-sm { margin-bottom: var(--kn-space-sm); }
+.kn-mb-md { margin-bottom: var(--kn-space-md); }
+.kn-mb-lg { margin-bottom: var(--kn-space-lg); }
+
+.kn-p-md { padding: var(--kn-space-md); }
+.kn-p-lg { padding: var(--kn-space-lg); }
+
+/* Transitions — 175ms ease-in-out globally */
+.kn-transition {
+  transition: all var(--kn-transition);
+}
+
+/* Success / Warning text */
+.kn-text-success { color: var(--kn-color-success); }
+.kn-text-warning { color: var(--kn-color-warning); }
+.kn-text-muted { color: var(--kn-color-text-muted); }

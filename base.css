@@ -1,0 +1,60 @@
+/**
+ * KodNest Premium Build System — Base Styles
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-size-body-lg);
+  line-height: var(--kn-line-height-body);
+  color: var(--kn-color-text);
+  background-color: var(--kn-color-bg);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Headings — Serif, confident, generous spacing */
+h1, h2, h3, .kn-heading {
+  font-family: var(--kn-font-serif);
+  font-weight: 700;
+  color: var(--kn-color-text);
+  margin-top: 0;
+  margin-bottom: var(--kn-space-sm);
+  line-height: var(--kn-line-height-tight);
+  letter-spacing: -0.02em;
+}
+
+h1, .kn-h1 { font-size: var(--kn-size-h1); margin-bottom: var(--kn-space-md); }
+h2, .kn-h2 { font-size: var(--kn-size-h2); margin-bottom: var(--kn-space-sm); }
+h3, .kn-h3 { font-size: var(--kn-size-h3); }
+
+/* Body text — Max width for readability */
+p, .kn-body {
+  max-width: var(--kn-text-max-width);
+  margin: 0 0 var(--kn-space-sm);
+  color: var(--kn-color-text);
+}
+
+.kn-subtext {
+  font-size: var(--kn-size-body);
+  color: var(--kn-color-text-muted);
+  max-width: var(--kn-text-max-width);
+  margin-bottom: var(--kn-space-md);
+}
+
+/* No decorative fonts, no random sizes */
+/* Whitespace is part of design */

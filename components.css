@@ -1,0 +1,201 @@
+/**
+ * KodNest Premium Build System — Components
+ * Same hover effect and border radius everywhere
+ * Clean borders, no heavy shadows
+ */
+
+/* ─── Buttons ─── */
+.kn-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kn-space-xs);
+  padding: var(--kn-space-xs) var(--kn-space-sm);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-size-body);
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: var(--kn-radius);
+  border: var(--kn-border-width) solid transparent;
+  cursor: pointer;
+  transition: all var(--kn-transition);
+  text-decoration: none;
+}
+
+.kn-btn:focus-visible {
+  outline: 2px solid var(--kn-color-accent);
+  outline-offset: 2px;
+}
+
+/* Primary = solid deep red */
+.kn-btn--primary {
+  background-color: var(--kn-color-accent);
+  color: white;
+  border-color: var(--kn-color-accent);
+}
+
+.kn-btn--primary:hover {
+  background-color: #6E0000;
+  border-color: #6E0000;
+}
+
+.kn-btn--primary:active {
+  background-color: #5C0000;
+}
+
+/* Secondary = outlined */
+.kn-btn--secondary {
+  background-color: transparent;
+  color: var(--kn-color-text);
+  border-color: var(--kn-color-border);
+}
+
+.kn-btn--secondary:hover {
+  border-color: var(--kn-color-text-muted);
+  background-color: rgba(17, 17, 17, 0.04);
+}
+
+.kn-btn--secondary:active {
+  background-color: rgba(17, 17, 17, 0.08);
+}
+
+/* Ghost / tertiary for panel actions */
+.kn-btn--ghost {
+  background-color: transparent;
+  color: var(--kn-color-text-muted);
+  border-color: var(--kn-color-border);
+}
+
+.kn-btn--ghost:hover {
+  color: var(--kn-color-text);
+  border-color: var(--kn-color-text-muted);
+}
+
+/* ─── Inputs ─── */
+.kn-input,
+.kn-textarea {
+  width: 100%;
+  padding: var(--kn-space-xs) var(--kn-space-sm);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-size-body);
+  line-height: 1.5;
+  color: var(--kn-color-text);
+  background-color: white;
+  border: var(--kn-border-width) solid var(--kn-color-border);
+  border-radius: var(--kn-radius);
+  transition: border-color var(--kn-transition);
+}
+
+.kn-input:focus,
+.kn-textarea:focus {
+  outline: none;
+  border-color: var(--kn-color-border-focus);
+  box-shadow: 0 0 0 1px var(--kn-color-border-focus);
+}
+
+.kn-input::placeholder,
+.kn-textarea::placeholder {
+  color: var(--kn-color-text-muted);
+}
+
+.kn-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ─── Cards ─── */
+.kn-card {
+  background-color: white;
+  border: var(--kn-border-width) solid var(--kn-color-border);
+  border-radius: var(--kn-radius);
+  padding: var(--kn-space-md);
+  margin-bottom: var(--kn-space-md);
+}
+
+.kn-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Subtle border, no drop shadows, balanced padding */
+
+/* ─── Secondary Panel Components ─── */
+.kn-prompt-box {
+  background-color: white;
+  border: var(--kn-border-width) solid var(--kn-color-border);
+  border-radius: var(--kn-radius);
+  padding: var(--kn-space-sm);
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: var(--kn-size-caption);
+  line-height: 1.5;
+  color: var(--kn-color-text);
+  margin-bottom: var(--kn-space-sm);
+  position: relative;
+}
+
+.kn-prompt-box__content {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.kn-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-xs);
+  margin-top: var(--kn-space-md);
+}
+
+.kn-panel-actions .kn-btn {
+  flex: 0 0 auto;
+}
+
+/* Copy, Build in Lovable, It Worked, Error, Add Screenshot — all use same styling */
+
+/* ─── Error States ─── */
+.kn-error {
+  padding: var(--kn-space-md);
+  border: var(--kn-border-width) solid var(--kn-color-accent);
+  border-radius: var(--kn-radius);
+  background-color: rgba(139, 0, 0, 0.04);
+}
+
+.kn-error__title {
+  font-weight: 600;
+  color: var(--kn-color-accent);
+  margin-bottom: var(--kn-space-xs);
+}
+
+.kn-error__message {
+  font-size: var(--kn-size-body);
+  color: var(--kn-color-text);
+  margin-bottom: var(--kn-space-xs);
+}
+
+.kn-error__fix {
+  font-size: var(--kn-size-caption);
+  color: var(--kn-color-text-muted);
+}
+
+/* Explain what went wrong + how to fix, never blame user */
+
+/* ─── Empty States ─── */
+.kn-empty {
+  padding: var(--kn-space-lg);
+  text-align: center;
+  border: var(--kn-border-width) dashed var(--kn-color-border);
+  border-radius: var(--kn-radius);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.kn-empty__title {
+  font-family: var(--kn-font-serif);
+  font-size: var(--kn-size-h3);
+  margin-bottom: var(--kn-space-xs);
+}
+
+.kn-empty__message {
+  font-size: var(--kn-size-body);
+  color: var(--kn-color-text-muted);
+  margin-bottom: var(--kn-space-md);
+}
+
+/* Provide next action, never feel dead */

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KodNest Premium Build System — Design System Showcase</title>
+  <link rel="stylesheet" href="kodnest.css">
+</head>
+<body>
+  <div class="kn-app">
+    <!-- Top Bar -->
+    <header class="kn-topbar">
+      <div class="kn-topbar__left">Project Alpha</div>
+      <div class="kn-topbar__center">Step 2 / 5</div>
+      <div class="kn-topbar__right">
+        <span class="kn-status-badge kn-status-badge--in-progress">In Progress</span>
+      </div>
+    </header>
+
+    <!-- Context Header -->
+    <section class="kn-context-header">
+      <h1>Define Your Product Scope</h1>
+      <p class="kn-subtext">Set the boundaries for what you're building. Clear scope leads to faster delivery.</p>
+    </section>
+
+    <!-- Main: Workspace + Panel -->
+    <main class="kn-main">
+      <!-- Primary Workspace (70%) -->
+      <div class="kn-workspace">
+        <div class="kn-card">
+          <h3>Core Features</h3>
+          <p class="kn-body">Select the primary capabilities your product needs. Clean cards, predictable components.</p>
+          <input type="text" class="kn-input kn-mt-sm" placeholder="Enter feature name">
+        </div>
+        <div class="kn-card">
+          <h3>Empty State Example</h3>
+          <div class="kn-empty">
+            <p class="kn-empty__title">No items yet</p>
+            <p class="kn-empty__message">Add your first item to get started.</p>
+            <button class="kn-btn kn-btn--primary">Add Item</button>
+          </div>
+        </div>
+        <div class="kn-card">
+          <h3>Error State Example</h3>
+          <div class="kn-error">
+            <p class="kn-error__title">Connection failed</p>
+            <p class="kn-error__message">The service could not be reached. This usually means a temporary network issue.</p>
+            <p class="kn-error__fix">Check your internet connection and try again. If the problem persists, wait a few minutes and retry.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary Panel (30%) -->
+      <aside class="kn-panel">
+        <h3 class="kn-panel__title">Step Guidance</h3>
+        <p class="kn-panel__description">List the core features your users need. Start with 3–5 essentials.</p>
+        
+        <div class="kn-prompt-box">
+          <div class="kn-prompt-box__content">Create a todo app with:
+- Add, edit, delete tasks
+- Mark complete
+- Filter by status</div>
+        </div>
+        
+        <div class="kn-panel-actions">
+          <button class="kn-btn kn-btn--secondary">Copy</button>
+          <button class="kn-btn kn-btn--primary">Build in Lovable</button>
+          <button class="kn-btn kn-btn--ghost">It Worked</button>
+          <button class="kn-btn kn-btn--ghost">Error</button>
+          <button class="kn-btn kn-btn--ghost">Add Screenshot</button>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Proof Footer -->
+    <footer class="kn-proof-footer">
+      <label class="kn-proof-item">
+        <input type="checkbox"> UI Built
+      </label>
+      <label class="kn-proof-item">
+        <input type="checkbox"> Logic Working
+      </label>
+      <label class="kn-proof-item">
+        <input type="checkbox"> Test Passed
+      </label>
+      <label class="kn-proof-item">
+        <input type="checkbox"> Deployed
+      </label>
+    </footer>
+  </div>
+</body>
+</html>

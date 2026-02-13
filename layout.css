@@ -1,0 +1,119 @@
+/**
+ * KodNest Premium Build System — Global Layout Structure
+ * [Top Bar] → [Context Header] → [Primary Workspace + Secondary Panel] → [Proof Footer]
+ */
+
+.kn-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ─── Top Bar ─── */
+.kn-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--kn-topbar-height);
+  padding: 0 var(--kn-space-md);
+  background-color: var(--kn-color-bg);
+  border-bottom: var(--kn-border-width) solid var(--kn-color-border);
+  flex-shrink: 0;
+}
+
+.kn-topbar__left {
+  font-family: var(--kn-font-serif);
+  font-weight: 700;
+  font-size: var(--kn-size-h3);
+  color: var(--kn-color-text);
+}
+
+.kn-topbar__center {
+  font-size: var(--kn-size-caption);
+  color: var(--kn-color-text-muted);
+}
+
+.kn-topbar__right .kn-status-badge {
+  font-size: var(--kn-size-caption);
+  padding: var(--kn-space-xs) var(--kn-space-sm);
+  border-radius: var(--kn-radius);
+  font-weight: 500;
+  border: var(--kn-border-width) solid var(--kn-color-border);
+  background-color: var(--kn-color-bg);
+}
+
+.kn-status-badge--not-started { color: var(--kn-color-text-muted); }
+.kn-status-badge--in-progress { border-color: var(--kn-color-warning); color: var(--kn-color-warning); }
+.kn-status-badge--shipped { border-color: var(--kn-color-success); color: var(--kn-color-success); }
+
+/* ─── Context Header ─── */
+.kn-context-header {
+  padding: var(--kn-space-lg) var(--kn-space-md);
+  background-color: var(--kn-color-bg);
+  border-bottom: var(--kn-border-width) solid var(--kn-color-border);
+}
+
+.kn-context-header h1 {
+  margin-bottom: var(--kn-space-xs);
+}
+
+/* ─── Main Content Area ─── */
+.kn-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Primary Workspace (70%) — Main product interaction */
+.kn-workspace {
+  flex: 0 0 var(--kn-workspace-ratio);
+  padding: var(--kn-space-lg);
+  overflow-y: auto;
+}
+
+/* Secondary Panel (30%) — Step explanation, prompts, actions */
+.kn-panel {
+  flex: 0 0 var(--kn-panel-ratio);
+  padding: var(--kn-space-lg);
+  border-left: var(--kn-border-width) solid var(--kn-color-border);
+  background-color: var(--kn-color-bg);
+  overflow-y: auto;
+}
+
+.kn-panel__title {
+  font-family: var(--kn-font-serif);
+  font-size: var(--kn-size-h3);
+  margin-bottom: var(--kn-space-sm);
+}
+
+.kn-panel__description {
+  font-size: var(--kn-size-body);
+  color: var(--kn-color-text-muted);
+  margin-bottom: var(--kn-space-md);
+}
+
+/* ─── Proof Footer (persistent bottom) ─── */
+.kn-proof-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-lg);
+  padding: 0 var(--kn-space-md);
+  height: var(--kn-footer-height);
+  background-color: var(--kn-color-bg);
+  border-top: var(--kn-border-width) solid var(--kn-color-border);
+  flex-shrink: 0;
+}
+
+.kn-proof-item {
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-xs);
+  font-size: var(--kn-size-caption);
+  color: var(--kn-color-text-muted);
+}
+
+.kn-proof-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--kn-color-accent);
+}
