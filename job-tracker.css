@@ -1,0 +1,164 @@
+/**
+ * Job Notification Tracker — Route Skeleton
+ * KodNest Premium Design System
+ */
+
+/* ─── Top Navigation ─── */
+.jt-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--kn-space-sm) var(--kn-space-md);
+  background-color: var(--kn-color-bg);
+  border-bottom: var(--kn-border-width) solid var(--kn-color-border);
+}
+
+.jt-nav__brand {
+  font-family: var(--kn-font-serif);
+  font-weight: 700;
+  font-size: var(--kn-size-h3);
+  color: var(--kn-color-text);
+  text-decoration: none;
+}
+
+.jt-nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-md);
+}
+
+.jt-nav__link {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-size-body);
+  font-weight: 500;
+  color: var(--kn-color-text-muted);
+  text-decoration: none;
+  padding-bottom: var(--kn-space-xs);
+  border-bottom: 2px solid transparent;
+  transition: all var(--kn-transition);
+}
+
+.jt-nav__link:hover {
+  color: var(--kn-color-text);
+}
+
+.jt-nav__link--active {
+  color: var(--kn-color-accent);
+  border-bottom-color: var(--kn-color-accent);
+}
+
+/* ─── Hamburger (mobile) ─── */
+.jt-nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  padding: var(--kn-space-xs);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--kn-transition);
+}
+
+.jt-nav__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--kn-color-text);
+  transition: all var(--kn-transition);
+}
+
+.jt-nav__hamburger.is-open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.jt-nav__hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.jt-nav__hamburger.is-open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ─── Responsive: collapse to hamburger ─── */
+@media (max-width: 768px) {
+  .jt-nav__hamburger {
+    display: flex;
+  }
+
+  .jt-nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: var(--kn-space-sm);
+    background-color: var(--kn-color-bg);
+    border-bottom: var(--kn-border-width) solid var(--kn-color-border);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.04);
+    display: none;
+  }
+
+  .jt-nav__links.is-open {
+    display: flex;
+  }
+
+  .jt-nav__link {
+    padding: var(--kn-space-sm);
+    width: 100%;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+
+  .jt-nav__link--active {
+    border-left-color: var(--kn-color-accent);
+    border-bottom-color: transparent;
+  }
+
+  .jt-nav {
+    position: relative;
+  }
+}
+
+/* ─── Page Placeholder ─── */
+.jt-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--kn-space-xl) var(--kn-space-md);
+  max-width: var(--kn-text-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.jt-page__heading {
+  font-family: var(--kn-font-serif);
+  font-size: var(--kn-size-h1);
+  font-weight: 700;
+  color: var(--kn-color-text);
+  margin: 0 0 var(--kn-space-sm);
+  line-height: var(--kn-line-height-tight);
+}
+
+.jt-page__subtext {
+  font-size: var(--kn-size-body-lg);
+  color: var(--kn-color-text-muted);
+  line-height: var(--kn-line-height-body);
+  margin: 0;
+}
+
+/* ─── App shell ─── */
+.jt-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--kn-color-bg);
+}
+
+.jt-app__main {
+  flex: 1;
+}
