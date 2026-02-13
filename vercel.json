@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    { "source": "/dashboard", "destination": "/dashboard/", "permanent": false },
+    { "source": "/Dashboard", "destination": "/dashboard/", "permanent": true },
+    { "source": "/Dashboard/", "destination": "/dashboard/", "permanent": true },
+    { "source": "/saved", "destination": "/saved/", "permanent": false },
+    { "source": "/Saved", "destination": "/saved/", "permanent": true },
+    { "source": "/Saved/", "destination": "/saved/", "permanent": true },
+    { "source": "/digest", "destination": "/digest/", "permanent": false },
+    { "source": "/Digest", "destination": "/digest/", "permanent": true },
+    { "source": "/Digest/", "destination": "/digest/", "permanent": true },
+    { "source": "/settings", "destination": "/settings/", "permanent": false },
+    { "source": "/Settings", "destination": "/settings/", "permanent": true },
+    { "source": "/Settings/", "destination": "/settings/", "permanent": true },
+    { "source": "/proof", "destination": "/proof/", "permanent": false },
+    { "source": "/Proof", "destination": "/proof/", "permanent": true },
+    { "source": "/Proof/", "destination": "/proof/", "permanent": true }
+  ]
+}
